@@ -6,8 +6,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\Models\User;
 use App\Models\Permission;
-
-
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 

@@ -34,12 +34,15 @@ class ClassesController extends Controller
 
     public function classesDatatable($status)
     {
-        $data = $this->repository->findCondition('status', $status)->load('subject', 'teacher')->map(function($item) {
+        $data = $this->repository->findCondition('status', $status)->load('subject', 'teacher')
+        // dd($data);
+        ->map(function($item) {
             $item['subject_id'] = $item->subject->name;
             $item['user_id'] = $item->teacher->name;
 
             return $item;
         });
+        dd($data);
         return Datatables::of($data)
             ->addColumn('action', function ($data) {
                 return '<a href="#" class="btn btn-sm btn-success adddetail" id="show" data-id="' . $data->id . '"><i class="fa fa-plus"></i></a>

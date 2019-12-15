@@ -122,7 +122,7 @@ class UserController extends Controller
                 if ($user->status == config('messages.active')) {
                     return "<label class='switch switch-border switch-danger ahihi' title='Active'>
                                 <input type='checkbox' id='' data-status='status' checked> 
-                                <span class='switch-indicator' user-id=' " . $user->id . " ' data-status='1'></span>                           
+                                <span class='switch-indicator' user-id=' " . $user->id . " ' data-status='1'></span>
                             </label>";
                 } else {
                     return "<label class='switch switch-border switch-danger ahihi' title='Deactive'>
